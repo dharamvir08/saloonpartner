@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Saloon Partner</string>
+    <string name="send_otp">Send Otp</string>
+    <string name="verify">Verify</string>
+    <string name="create_acc_txt">Don\'t have an BYC partner account? Create</string>
+    <string name="byc_partner">BYC PARTNER</string>
+    <string name="registered_phone_number">Registered Phone Number</string>
+    <string name="enter_otp_txt">Enter the otp sent to your phone Number</string>
+    <string name="login">LOGIN</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="view_and_manage_bookings">View and Manage Bookings</string>
+    <string name="backviewbookingsscreen">backViewBookingsScreen</string>
+
+
+    <string name="slot2">11:00AM - 12:00 AM</string>
+    <string name="slot1">09:00 AM - 11:00AM</string>
+    <string name="slot3">01:00 PM - 03:00 PM</string>
+    <string name="slot4">03:00 PM - 05:00 PM</string>
+    <string name="slot5">05:00 PM - 07:00 PM</string>
+    <string name="slot6">07:00 PM - 09:00 PM</string>
+
+</resources>
