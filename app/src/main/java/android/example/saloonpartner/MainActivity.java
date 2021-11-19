@@ -34,7 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
+import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     private void setDays() {
 
         Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM", Locale.getDefault());
         String getCurrentDate = sdf.format(c.getTime());
 
         checkExistence(getCurrentDate);
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //updating calender Schedule
-        for (int i = 1; i < 7; i++)
+        for (int i = 1; i <=7; i++)
         {
             c.add(Calendar.DAY_OF_MONTH, 1);
             String getDate = sdf.format(c.getTime());

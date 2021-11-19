@@ -2,20 +2,20 @@ package android.example.saloonpartner.adapter;
 
 import android.content.Context;
 
-import android.content.Intent;
+
 import android.example.saloonpartner.R;
 import android.example.saloonpartner.common.Common;
 import android.example.saloonpartner.model.SlotsModel;
 import android.view.LayoutInflater;
 
-import android.view.MenuItem;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 
 import androidx.annotation.NonNull;
@@ -90,7 +90,6 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.HmBook
 
                 if (item.getItemId() == R.id.disable_slot) {
                     reference.child(dateCh).child(slotName).setValue("UnAvailable");
-                    // Toast.makeText(context, "Deleting record of " + name, Toast.LENGTH_SHORT).show();
                 } else if (item.getItemId() == R.id.enable_slot) {
                     reference.child(dateCh).child(slotName).setValue("Available");
                 }

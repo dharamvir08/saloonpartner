@@ -19,5 +19,6 @@
     <string name="slot4">03:00 PM - 05:00 PM</string>
     <string name="slot5">05:00 PM - 07:00 PM</string>
     <string name="slot6">07:00 PM - 09:00 PM</string>
+    <string name="refresh_the_slots">refresh_the slots</string>
 
 </resources>
