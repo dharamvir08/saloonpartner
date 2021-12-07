@@ -20,5 +20,30 @@
     <string name="slot5">05:00 PM - 07:00 PM</string>
     <string name="slot6">07:00 PM - 09:00 PM</string>
     <string name="refresh_the_slots">refresh_the slots</string>
+    <string name="view_bookings">View Bookings</string>
+    <string name="view_schedule">View Schedule</string>
+    <string name="back_logo_btn">back_logo_btn</string>
+    <string name="bookings">Bookings</string>
+    <string name="booking_detail">Booking Detail</string>
+    <string name="booking_id">Booking Id</string>
+    <string name="username">UserName</string>
+    <string name="thanks_for_making_a_booking_successfull">Thanks for making a booking successfull 🎉</string>
+    <string name="done">DONE ✔</string>
+    <string name="reached_destination">Reached Destination!🚩</string>
+    <string name="set_your_status_towards_this_booking">Set Your Status towards this Booking</string>
+    <string name="on_the_way_to_destination">On the Way to Destination</string>
+    <string name="payment_wallet">Payment Wallet</string>
+    <string name="help_and_support">Help and Support</string>
+    <string name="debited_amount_details">Debited Amount Details</string>
+    <string name="credited_amount_details">Credited Amount Details</string>
+    <string name="check_payments_details">Check Payments Details</string>
+    <string name="credit_details">Credit Details</string>
+    <string name="debit_details">Debit Details</string>
+
+    <string name="amount">Amount </string>
+    <string name="date">Date</string>
+    <string name="description">Description</string>
+    <string name="bank_details">Bank Details</string>
+    <string name="proflie">Proflie</string>
 
 </resources>

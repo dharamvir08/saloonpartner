@@ -28,7 +28,7 @@
                 android:layout_marginStart="12sp"
                 android:layout_marginTop="14dp"
                 android:gravity="center_horizontal"
-                android:text="BYC PARTNER"
+                android:text="@string/app_name"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
@@ -36,6 +36,62 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Phone"
+            android:id="@+id/phoneNoMain"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp"
+            />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/viewScheduleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_schedule" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loadingProgressBar"
+            android:visibility="visible"
+            />
+
+        <Button
+            android:id="@+id/viewBookingsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_bookings"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            />
+
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Logout" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/showDates"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            />
+
+    </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_menu"
@@ -47,48 +103,6 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/menu" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My Phone"
-        android:id="@+id/phoneNoMain"
-        android:textColor="@color/black"
-        android:layout_marginBottom="4dp"
-        />
 
-    <Button
-        android:visibility="gone"
-        android:id="@+id/viewBookingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View/Manage Bookings" />
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/loadingProgressBar"
-        android:visibility="visible"
-        />
-
-        <Button
-            android:id="@+id/logoutBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:text="Logout" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/showDates"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="12dp"
-        />
-
-</LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bookingsPreviewTemplate"
+    android:layout_width="match_parent"
+    android:layout_height="118dp"
+    android:layout_marginLeft="22dp"
+    android:orientation="horizontal"
+    android:background="#E9E8FA"
+    android:layout_marginTop="22dp"
+    android:layout_marginRight="22dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="118dp"
+        android:layout_marginEnd="18dp"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:id="@+id/bookingIdPrv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10sp"
+            android:text="bookingId" />
+
+
+        <TextView
+        android:id="@+id/dateSlotPrv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginStart="12dp"
+            android:text="date_slot"
+            android:textColor="@color/black" />
+
+
+
+        <TextView
+         android:id="@+id/timeSlotPrv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="4dp"
+            android:text="09-00 - 11:00"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/pricePaidPrv"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pricePaid"
+            android:textColor="@color/black"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/userNamePr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10sp"
+            android:text="User Name"
+            />
+
+
+        <TextView
+            android:id="@+id/cityPr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginStart="12dp"
+            android:text="City"
+            android:textColor="@color/black" />
+
+
+
+        <TextView
+            android:id="@+id/addressPr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="4dp"
+            android:text="Address"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/statusPr"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WaitingXX"
+            android:textColor="@color/black"
+            />
+
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

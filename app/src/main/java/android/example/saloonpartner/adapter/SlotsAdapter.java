@@ -27,14 +27,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
-public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.HmBookingsViewHolder> {
+public class SlotsAdapter extends RecyclerView.Adapter<SlotsAdapter.HmSlotsViewHolder> {
     List<SlotsModel> list;
     Context context;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference reference;
 
 
-    public BookingsAdapter(List<SlotsModel> list, Context context) {
+    public SlotsAdapter(List<SlotsModel> list, Context context) {
         this.list = list;
         this.context = context;
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -47,15 +47,15 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.HmBook
 
     @NonNull
     @Override
-    public BookingsAdapter.HmBookingsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public HmSlotsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.slots_design, parent, false);
 
-        return new HmBookingsViewHolder(view);
+        return new HmSlotsViewHolder(view);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BookingsAdapter.HmBookingsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull HmSlotsViewHolder holder, int position) {
 
 
         holder.daySlot1.setText(list.get(position).getSlot1());
@@ -108,7 +108,7 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.HmBook
         return list.size();
     }
 
-    public static class HmBookingsViewHolder extends RecyclerView.ViewHolder {
+    public static class HmSlotsViewHolder extends RecyclerView.ViewHolder {
         LinearLayout item, nine, eleven, one, three, five, seven;
 
 
@@ -121,7 +121,7 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.HmBook
         TextView daySlot6;
 
 
-        public HmBookingsViewHolder(@NonNull View itemView) {
+        public HmSlotsViewHolder(@NonNull View itemView) {
             super(itemView);
             dateTxt = itemView.findViewById(R.id.dayTxtView);
             daySlot1 = itemView.findViewById(R.id.daySlot1);

@@ -14,6 +14,8 @@ import android.example.saloonpartner.model.HomeVendorModel;
 import android.example.saloonpartner.model.SlotsModel;
 
 
+import android.example.saloonpartner.payments.WalletActivity;
+
 import android.os.Bundle;
 
 
@@ -21,6 +23,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,13 +40,15 @@ import java.util.Calendar;
 import java.util.Locale;
 
 
+
 public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar;
-    Button logoutBtn, viewBookingsButton;
+    Button logoutBtn, viewSchedulesButton, viewBookingsBtn;
     DrawerLayout drawerLayout;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     Toolbar toolbar;
+
     ActionBarDrawerToggle actionBarDrawerToggle;
     TextView phoneTxt;
     FirebaseDatabase firebaseDatabase;
@@ -57,25 +62,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
-        editor = sharedPreferences.edit();
-        phone = sharedPreferences.getString("userP", "No name defined");
-        editor.apply();
+        initialize();
 
+
+        sharedPreferencesData();
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         reference = firebaseDatabase.getReference("hmvendor").child(phone);
 
-        //Initialize
-        initialize();
-
-        //Buttons
-        logout();
-        viewBookings();
-
-
-        //navigation view
         setNavigationDrawer();
+        logout();
+        viewSchedules();
+
+        viewAllBookings();
+
 
         getVendorData();
 
@@ -83,6 +83,46 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+    private void viewAllBookings() {
+        viewBookingsBtn.setOnClickListener(v -> {
+
+            Intent intent = new Intent(MainActivity.this, ViewBookingsScreen.class);
+            startActivity(intent);
+
+
+        });
+    }
+
+
+    private void initialize() {
+
+        drawerLayout = findViewById(R.id.my_drawer_layout);
+        logoutBtn = findViewById(R.id.logoutBtn);
+        viewSchedulesButton = findViewById(R.id.viewScheduleBtn);
+        viewBookingsBtn = findViewById(R.id.viewBookingsBtn);
+
+
+        toolbar = findViewById(R.id.toolbar);
+        phoneTxt = findViewById(R.id.phoneNoMain);
+
+
+        progressBar = findViewById(R.id.loadingProgressBar);
+
+
+    }
+
+
+    private void sharedPreferencesData() {
+
+        sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        phone = sharedPreferences.getString("userP", "No name defined");
+        editor.apply();
+
+    }
+
 
     private void setDays() {
 
@@ -96,10 +136,8 @@ public class MainActivity extends AppCompatActivity {
         d.add(Calendar.DAY_OF_MONTH, (-1));
 
 
-
         //updating calender Schedule
-        for (int i = 1; i <=7; i++)
-        {
+        for (int i = 1; i <= 7; i++) {
             c.add(Calendar.DAY_OF_MONTH, 1);
             String getDate = sdf.format(c.getTime());
             checkExistence(getDate);
@@ -165,7 +203,8 @@ public class MainActivity extends AppCompatActivity {
                 phoneTxt.setText(homeVendorModel.getPhoneNo());
                 Common.currentRecord = homeVendorModel;
                 progressBar.setVisibility(View.GONE);
-                viewBookingsButton.setVisibility(View.VISIBLE);
+                viewSchedulesButton.setVisibility(View.VISIBLE);
+                viewBookingsBtn.setVisibility(View.VISIBLE);
 
 
             }
@@ -180,22 +219,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void initialize() {
-
-        drawerLayout = findViewById(R.id.my_drawer_layout);
-        logoutBtn = findViewById(R.id.logoutBtn);
-        viewBookingsButton = findViewById(R.id.viewBookingButton);
-
-        drawerLayout = findViewById(R.id.my_drawer_layout);
-        toolbar = findViewById(R.id.toolbar);
-        phoneTxt = findViewById(R.id.phoneNoMain);
-
-
-        progressBar = findViewById(R.id.loadingProgressBar);
-
-
-    }
-
     private void logout() {
         logoutBtn.setOnClickListener(v -> {
             editor.clear();
@@ -207,48 +230,58 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void viewBookings() {
-        viewBookingsButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, ViewBookingsScreen.class);
+
+    private void viewSchedules() {
+        viewSchedulesButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ViewScheduleScreen.class);
             startActivity(intent);
         });
     }
 
 
     private void setNavigationDrawer() {
-        /*Declaration*/
 
         NavigationView navigationView = findViewById(R.id.nav_menu);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.nav_open, R.string.nav_close);
+
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        //      View view = navigationView.getHeaderView(0);
+        View view = navigationView.getHeaderView(0);
 
 
-//        ImageView uImage = view.findViewById(R.id.nav_imag);
-//        TextView uName = view.findViewById(R.id.nav_name);
+        ImageView uImage = view.findViewById(R.id.nav_imag);
+        TextView uName = view.findViewById(R.id.nav_phone);
+        uName.setText(phone);
 
 
         // implement setNavigationItemSelectedListener event on NavigationView
         navigationView.setNavigationItemSelectedListener(item -> {
 
-            if (item.getItemId() == R.id.nav_profile) {
-//                    Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
-//                    startActivity(intent);
-//                    return true;
-                System.out.println("Profile");
-            } else if (item.getItemId() == R.id.nav_settings) {
-                System.out.println("nav_Settings selected");
-//                    Intent intent = new Intent(MainActivity.this,SettingsActivity.class);
-//                    startActivity(intent);
-//                    return true;
-            } else {
-                System.out.println("Else other item selected");
-            }
-            return false;
-        });
 
+                    if (item.getItemId() == R.id.nav_profile) {
+
+                        System.out.println("Profile");
+
+                    } else if (item.getItemId() == R.id.nav_settings) {
+                        System.out.println("nav_Settings selected");
+
+
+                    } else if (item.getItemId() == R.id.nav_wallet) {
+
+
+                        Intent intent = new Intent(MainActivity.this, WalletActivity.class);
+                        startActivity(intent);
+
+
+                    } else {
+                        System.out.println("Else other item selected");
+                        Toast.makeText(MainActivity.this, "Other", Toast.LENGTH_SHORT).show();
+
+                    }
+                    return false;
+                }
+        );
 
     }
 

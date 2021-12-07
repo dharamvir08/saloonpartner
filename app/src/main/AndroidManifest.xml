@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SaloonPartner">
-        <activity android:name=".ViewBookingsScreen"></activity>
+        <activity android:name=".profile.ProfileActivity"></activity>
+        <activity android:name=".payments.DebitDetailsActivity" />
+        <activity android:name=".payments.CreditDetailsActivity" />
+        <activity android:name=".payments.WalletActivity" />
+        <activity android:name=".BookingDetailsActivity" />
+        <activity android:name=".ViewBookingsScreen" />
+        <activity android:name=".ViewScheduleScreen" />
         <activity android:name=".LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
