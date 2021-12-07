@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SaloonPartner">
-        <activity android:name=".profile.ProfileActivity"></activity>
+        <activity
+            android:name=".BankDetailsActivity"
+            android:exported="false" />
+        <activity android:name=".profile.ProfileActivity" />
         <activity android:name=".payments.DebitDetailsActivity" />
         <activity android:name=".payments.CreditDetailsActivity" />
         <activity android:name=".payments.WalletActivity" />

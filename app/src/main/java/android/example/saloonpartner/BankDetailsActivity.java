@@ -1,12 +1,12 @@
-package android.example.saloonpartner.profile;
+package android.example.saloonpartner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.example.saloonpartner.R;
+import android.example.saloonpartner.profile.ProfileActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-public class ProfileActivity extends AppCompatActivity {
+public class BankDetailsActivity extends AppCompatActivity {
 
     ImageView backBtn;
 
@@ -18,14 +18,15 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_bank_details);
 
-        backBtn = findViewById(R.id.backProfileBtn);
+        backBtn = findViewById(R.id.backBankDetailsBtn);
 
         back();
 
     }
     private void back() {
-        backBtn.setOnClickListener(v -> ProfileActivity.super.onBackPressed());
+        backBtn.setOnClickListener(v -> BankDetailsActivity.super.onBackPressed());
     }
+
 }

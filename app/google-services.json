@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "570659063395",
+    "firebase_url": "https://barberbooking-4bda0-default-rtdb.firebaseio.com",
+    "project_id": "barberbooking-4bda0",
+    "storage_bucket": "barberbooking-4bda0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570659063395:android:e0c9eae2f4b961f1c35a56",
+        "android_client_info": {
+          "package_name": "android.example.barberbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570659063395-aonkvaf9h64fs6dei7ij0gvm6a10fi38.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.example.barberbooking",
+            "certificate_hash": "1d2ebe95ce9f4bbdb40abc9f5e2107c38be3fcd3"
+          }
+        },
+        {
+          "client_id": "570659063395-ota69k0bbv7hrdjrjbf9ateeiuilvg84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKiUR55Li-N1oSaXRt4oEAM8H6FJhCtaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570659063395-ota69k0bbv7hrdjrjbf9ateeiuilvg84.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570659063395:android:dded821e67c2d8e2c35a56",
+        "android_client_info": {
+          "package_name": "android.example.saloonadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570659063395-ota69k0bbv7hrdjrjbf9ateeiuilvg84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKiUR55Li-N1oSaXRt4oEAM8H6FJhCtaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570659063395-ota69k0bbv7hrdjrjbf9ateeiuilvg84.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570659063395:android:c9b7d7ef1ab0eacfc35a56",
+        "android_client_info": {
+          "package_name": "android.example.saloonpartner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570659063395-kobagm2h3je5ogepscs7ggkl5d686u6j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.example.saloonpartner",
+            "certificate_hash": "1d2ebe95ce9f4bbdb40abc9f5e2107c38be3fcd3"
+          }
+        },
+        {
+          "client_id": "570659063395-ota69k0bbv7hrdjrjbf9ateeiuilvg84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKiUR55Li-N1oSaXRt4oEAM8H6FJhCtaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570659063395-ota69k0bbv7hrdjrjbf9ateeiuilvg84.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
