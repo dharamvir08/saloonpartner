@@ -8,7 +8,7 @@
     tools:context=".profile.ProfileActivity">
 
     <ImageView
-        android:id="@+id/backProfileBtn"
+        android:id="@+id/backBankDetailsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16sp"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="14sp"
         android:layout_marginTop="10dp"
-        android:text="@string/proflie"
+        android:text="@string/bank_details"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -37,13 +37,26 @@
             android:padding="16dp">
 
 
-            <ImageView
-                android:id="@+id/imageView"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                app:srcCompat="@drawable/ic_baseline_person_24"
-                tools:srcCompat="@tools:sample/avatars[0]" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="A/C No."
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -54,7 +67,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Name"
+                    android:text="Beneficiary Name"
                     android:textSize="20sp" />
 
                 <EditText
@@ -74,7 +87,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="BYC id"
+                    android:text="Bank Name"
                     android:textSize="20sp" />
 
                 <EditText
@@ -94,7 +107,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Address"
+                    android:text="Branch"
                     android:textSize="20sp" />
 
                 <EditText
@@ -114,51 +127,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="City"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Base Price"
+                    android:text="IFSC"
                     android:textSize="16sp" />
 
                 <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Phone"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
@@ -170,6 +142,14 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:srcCompat="@drawable/ic_baseline_person_24"
+        tools:srcCompat="@tools:sample/avatars[0]" />
 
 
 </LinearLayout>

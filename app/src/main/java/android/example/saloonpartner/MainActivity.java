@@ -16,6 +16,7 @@ import android.example.saloonpartner.model.SlotsModel;
 
 import android.example.saloonpartner.payments.WalletActivity;
 
+import android.example.saloonpartner.profile.ProfileActivity;
 import android.os.Bundle;
 
 
@@ -261,7 +262,8 @@ public class MainActivity extends AppCompatActivity {
 
                     if (item.getItemId() == R.id.nav_profile) {
 
-                        System.out.println("Profile");
+                        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                        startActivity(intent);
 
                     } else if (item.getItemId() == R.id.nav_settings) {
                         System.out.println("nav_Settings selected");
@@ -271,6 +273,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                         Intent intent = new Intent(MainActivity.this, WalletActivity.class);
+                        startActivity(intent);
+
+
+                    } else if (item.getItemId() == R.id.nav_bank_details) {
+
+
+                        Intent intent = new Intent(MainActivity.this, BankDetailsActivity.class);
                         startActivity(intent);
 
 
