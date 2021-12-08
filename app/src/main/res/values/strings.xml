@@ -45,5 +45,18 @@
     <string name="description">Description</string>
     <string name="bank_details">Bank Details</string>
     <string name="proflie">Proflie</string>
+    <string name="a_c_no">A/C No.</string>
+    <string name="beneficiary_name">Beneficiary Name</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="branch">Branch</string>
+    <string name="ifsc_code">IFSC code</string>
+    <string name="account_type">Account type</string>
+    <string name="name">Name</string>
+    <string name="byc_id">BYC Id.</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="phone_number">Phone number</string>
+    <string name="base_price">Base Price</string>
+    <string name="phone_number_additional">Phone Number Additional</string>
 
 </resources>
